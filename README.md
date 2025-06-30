@@ -26,19 +26,21 @@
 <style>
 .col-3-3-3-3 > .c-3{width: calc(var(--col-3) - var(--gap-3));}
 </style> 
----
+```
 
 ## Зразок коду для різних колонок
 ```html
 <section class="row col-2-6-4">
-.col-2-6-4  > .c-2{width: calc(var(--col-2) - var(--gap-2));}
-.col-2-6-4  > .c-4{width: calc(var(--col-4) - var(--gap-2));}
-.col-2-6-4  > .c-6{width: calc(var(--col-6) - var(--gap-2));}
+  <div class="c-2">c-2</div>
+  <div class="c-6">c-6</div>
+  <div class="c-4">c-4</div>
 </section>
 <style>
-.col-3-3-3-3 > .c-3{width: calc(var(--col-3) - var(--gap-3));}
+.col-2-6-4  > .c-2{width: calc(var(--col-2) - var(--gap-2));}
+.col-2-6-4  > .c-6{width: calc(var(--col-6) - var(--gap-2));}
+.col-2-6-4  > .c-4{width: calc(var(--col-4) - var(--gap-2));}
 </style> 
----
+```
 
 ## Як використовувати?
 
