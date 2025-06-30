@@ -24,6 +24,7 @@
   <div class="c-3">c-3</div>
 </section>
 <style>
+.col-3-3-3-3 > .c-3{width: calc(var(--col-3) - var(--gap-3));}
 </style> 
 ---
 
