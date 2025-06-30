@@ -16,7 +16,7 @@
 ---
 
 ## Зразок для однакових колонок
-![example of an adaptive grid](./col-3-3-3-3.png)
+![example of an adaptive grid](/deposit/col-3-3-3-3.png)
 ```html
 <section class="row col-3-3-3-3">
   <div class="c-3">c-3</div>
@@ -30,7 +30,7 @@
 ```
 
 ## Зразок коду для різних колонок
-![example of an adaptive grid](./col-2-6-4.png)
+![example of an adaptive grid](deposit/col-3-3-3-3.png)
 ```html
 <section class="row col-2-6-4">
   <div class="c-2">c-2</div>
