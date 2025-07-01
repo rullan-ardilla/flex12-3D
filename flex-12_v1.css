@@ -61,7 +61,6 @@
 	background:	#dca1a1;
 	margin: var(--gap-half) 0; 
 	min-height:var(--gap);max-width:100%; 
-	align-content: center; text-align: center;
 	border-style: none; box-sizing:border-box;
 	}
 /*==🐿️== MEDIA sitka */
