@@ -114,7 +114,7 @@
 html {height: 100%; min-height: 100%; }
 body {min-height: 100%;width:100%;max-width:100%;font-size:14px; font-family: Arial, Helvetica, sans-serif; font-weight: 100; background:var(--white); color:var(--darck); line-height: 1;margin:0; padding:0;}
 figure, iframe{width:100%;padding:0; margin:0;}
-div, section, header, article, main, aside, footer, textarea, input, button, nav, ol, ul, li, a{border-style: none; display:block; -webkit-box-sizing:border-box;-moz-box-sizing:border-box; box-sizing:border-box;}
+div, section, header, article, main, aside, footer, textarea, input, button, nav, ol, ul, li, a, s, span, input, textarea{border-style: none; display:block; -webkit-box-sizing:border-box;-moz-box-sizing:border-box; box-sizing:border-box;}
 table {caption-side: bottom;border-collapse: collapse;}
 caption {padding-top: 0.5rem;padding-bottom: 0.5rem;color: #6c757d;text-align: left;}
 th {text-align: inherit;text-align: -webkit-match-parent;}
@@ -146,6 +146,17 @@ hr {margin: 1rem 0;color: var(--gray);background-color: currentColor;border: 0;o
 hr.eleghr {border: 0;height: 1px;background-image: -webkit-linear-gradient(left, rgba(105,106,105,0), rgba(105,106,105,0.75), rgba(105,106,105,0));background-image: -moz-linear-gradient(left, rgba(105,106,105,0), rgba(105,106,105,0.75), rgba(105,106,105,0));background-image: -ms-linear-gradient(left, rgba(105,106,105,0), rgba(105,106,105,0.75), rgba(105,106,105,0));background-image: -o-linear-gradient(left, rgba(105,106,105,0), rgba(105,106,105,0.75), rgba(105,106,105,0));}
 .a-center{text-align: center;width:100%;vertical-align: baseline;}
 .clear{display:block;position:relative;padding:1px 0; width:100%;min-height:1px;font-size:2px;float:none;clear: both;}
+select, textarea, input[type="text"], input[type="password"], input[type="file"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {display: inline-block;padding: 6px; vertical-align: middle;	border-radius: 3px;	background: transparent;	border: 1px solid #d7d7d7;}
+select {width: auto; padding: .35rem 2.2rem .35rem .65rem; background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+background-repeat: no-repeat; background-position: right .75rem center; background-size: 16px 12px; appearance: none;}
+select[multiple], select[size] {height: auto; padding-right: .75rem; background-image: none;}
+textarea {height: auto; margin: 0; overflow: auto; vertical-align: top; resize: vertical; }
+textarea:focus, select:focus, input[type="text"]:focus, input[type="password"]:focus,	input[type="file"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus,	input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus,	input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus,	input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus,	input[type="color"]:focus, .uneditable-input:focus {
+	border-color: #109aceed;
+}
+input::-moz-placeholder, textarea::-moz-placeholder, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { opacity: 0.6; }
+input:focus { outline: none; }
+input[type="file"], input[type="image"] { padding: 0; border-width: 0; }
 /*--- SPRITE ---*/
 [class*='bg-']{display:inline-block; background:url(../images/sprit.png) no-repeat -12px -235px;}
 .bg-kvadrat {width:58px; height:58px;background-position: -1392px -413px;}
