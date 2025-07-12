@@ -1,21 +1,21 @@
 # 🐿️flex12-3D
 1 version
-**Flex12-3D** — це сучасна, мінімалістична і гнучка CSS FLEX-сітка на 12 колонок, створена для швидкого і зручного розроблення адаптивних веб-інтерфейсів.
+**Flex12-3D** is a modern, minimalistic and flexible 12-column CSS FLEX grid, designed for fast and easy development of responsive web interfaces. ✅The feature is that it takes into account the real distance between columns, and does not emulate the distance through padding.
 ![Flex12](/deposit/images-flex12-v1.png)
 
 ---
 
-## Основні переваги Flex12-3D:
+## Main advantages Flex12-3D:
 
-- 🔹 **Простота використання:** інтуїтивний класовий підхід для швидкого створення сіток.  
-- 🔹 **12 колонок:** класична сітка, оптимальна для будь-яких типів макетів — від простих сторінок до складних додатків.  
-- 🔹 **Гнучкість:** легко комбінується з іншими CSS-технологіями та адаптується під будь-які розміри екранів.  
-- 🔹 **Мінімалістичний дизайн:** мінімальний CSS-код без зайвих залежностей і фреймворків.  
-- 🔹 **3D-ефекти:** з версії 2.0 унікальна фішка — підтримка легких 3D-трансформацій для сучасних UI/UX рішень.  
+- 🔹 **Ease of use:** Intuitive class-based approach for quick grid creation.
+- 🔹 **12 columns:** Classic grid, optimal for any type of layout — from simple pages to complex applications.
+- 🔹 **Flexibility:** Easily combined with other CSS technologies and adapted to any screen size.
+- 🔹 **Real distance between columns:** The feature is that it takes into account the real distance between columns, and does not emulate the distance through padding.
+- 🔹 **3D effects:** Since version 2.0, a unique feature — support for easy 3D transformations for modern UI/UX solutions.
 
 ---
 
-## Зразок для однакових колонок
+## Sample for identical columns
 ![example of an adaptive grid](/deposit/col-3-3-3-3.png)
 ```html
 <section class="row col-3-3-3-3">
@@ -29,7 +29,7 @@
 </style> 
 ```
 
-## Зразок коду для різних колонок
+## Sample code for different columns
 ![example of an adaptive grid](/deposit/col-2-6-4.png)
 ```html
 <section class="row col-2-6-4">
@@ -44,13 +44,13 @@
 </style> 
 ```
 
-## Як використовувати?
+## How to use?
 
-Просто підключи CSS (flex-12_v1.css), ти готовий створювати адаптивні сітки + з 3D-ефектами (з версії 2.0).
+Just plug in the CSS (flex-12_v1.css), you are ready to create responsive grids + with 3D effects (from version 2.0).
 
 ---
 
-Долучайся, роби свій код кращим з **Flex12-3D**! 🚀
+Join, make your code better with **Flex12-3D**! 🚀
 ```
 
 
