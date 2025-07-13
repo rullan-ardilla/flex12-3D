@@ -160,6 +160,8 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {color: inherit;tex
 hr {margin: var(--gap-half) 0; height:1px; background-color: var(--gray);border: 0;opacity: 0.9;}
 hr.eleghr {border: 0;height: 1px;background-image: -webkit-linear-gradient(left, rgba(105,106,105,0), rgba(105,106,105,0.75), rgba(105,106,105,0));background-image: -moz-linear-gradient(left, rgba(105,106,105,0), rgba(105,106,105,0.75), rgba(105,106,105,0));background-image: -ms-linear-gradient(left, rgba(105,106,105,0), rgba(105,106,105,0.75), rgba(105,106,105,0));background-image: -o-linear-gradient(left, rgba(105,106,105,0), rgba(105,106,105,0.75), rgba(105,106,105,0));}
 .a-center{text-align: center;width:100%;vertical-align: baseline;}
+.nodispl, .wievnot, .none, .hidden{display:none;}
+.rel {position:relative;}
 .clear{display:block;position:relative;padding:1px 0; width:100%;min-height:1px;font-size:2px;float:none;clear: both;}
 select, textarea, input[type="text"], input[type="password"], input[type="file"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {display: inline-block;padding: 6px; vertical-align: middle;	border-radius: 3px;	background: transparent;	border: 1px solid #d7d7d7;}
 select {width: auto; padding: .35rem 2.2rem .35rem .65rem; background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
