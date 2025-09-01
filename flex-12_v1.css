@@ -8,6 +8,7 @@
 --gap-halff: 8.67px;
 --gap-halfff: 4.33px;
 --gap: 34.7px;
+--gapp: 69.4px;
 --col-1:8.33%; 
 --col-2:16.6%; 
 --col-3:25%; 
@@ -84,6 +85,9 @@
 .col-1-4-7  > .c-1{width: calc(var(--col-1) - var(--gap-2));}
 .col-1-4-7  > .c-4{width: calc(var(--col-4) - var(--gap-2));}
 .col-1-4-7  > .c-7{width: calc(var(--col-7) - var(--gap-2));}
+.col-3-4-2-3 > .c-3{width: calc(var(--col-3) - var(--gap-3));}
+.col-3-4-2-3 > .c-4{width: calc(var(--col-4) - var(--gap-3));}
+.col-3-4-2-3 > .c-2{width: calc(var(--col-2) - var(--gap-3));}
 .str-1 {height: var(--gap);}.str-2 {height: calc(2 * var(--gap));}.str-3 {height: calc(3 * var(--gap));}.str-4 {height: calc(4 * var(--gap));}.str-5{height: calc(5 * var(--gap));}.str-6{height: calc(6 * var(--gap));}
 .row, .row-bc{display:flex; flex-flow: row wrap; justify-content: space-between; gap:var(--gap);max-width:100%;border-style: none; box-sizing:border-box;}
 .row-bc {align-items:center; align-content: center;}
@@ -91,7 +95,9 @@
 .row-c {display:flex; justify-content:center; align-items:center; align-content: center; gap:var(--gap);}
 .row-rtc {display:flex; justify-content: end; align-items:center; align-content: center; gap:var(--gap);}
 .nowrap {flex-wrap: nowrap;}
-/* end| R O O T  ------------------------------------------------------------- */
+/* end| R O O T  -----------------------
+.div-3-kolonku{flex: 1 1 calc(33.333% - var(--gap));} 
+-------------------------------------- */
 
 /* ⏰  29.08.2025 - CSS-grid: (Flex12-3D)---------------------
 |  🐿️ R E S E T  ☘ 
