@@ -88,6 +88,8 @@
 .col-2-3-7  > .c-7{width: calc(var(--col-7) - var(--gap-2));}
 .col-2-3-7  > .c-3{width: calc(var(--col-3) - var(--gap-2));}
 .col-2-3-7  > .c-2{width: calc(var(--col-2) - var(--gap-2));}
+.col-2-2-8  > .c-8{width: calc(var(--col-8) - var(--gap-2));}
+.col-2-2-8  > .c-2{width: calc(var(--col-2) - var(--gap-2));}
 .col-3-4-2-3 > .c-3{width: calc(var(--col-3) - var(--gap-3));}
 .col-3-4-2-3 > .c-4{width: calc(var(--col-4) - var(--gap-3));}
 .col-3-4-2-3 > .c-2{width: calc(var(--col-2) - var(--gap-3));}
