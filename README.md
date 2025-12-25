@@ -46,8 +46,8 @@
 
 
 
-## Color scheme WEB-HUD/:
-![example of an adaptive grid](/deposit/color-palets.png)
+## Color scheme WEB-HUD/UI:
+![example of an adaptive grid](https://github.com/rullan-ardilla/flex12-3D/blob/main/color-palets.png)
 
 ## How to use?
 
