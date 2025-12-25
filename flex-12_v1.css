@@ -32,21 +32,26 @@
 --gap-9: calc((9 * var(--gap)) / 10);
 --gap-10: calc((10 * var(--gap)) / 11);
 --gap-11: calc((11 * var(--gap)) / 12);
---font-size: 14px;
---txt:#3a6a80;
---blue: rgba(9, 149, 212, 0.8);
---cyan: rgba(53, 220, 220, 0.6);
---purple: rgba(181, 43, 173, 0.8);
---red: rgba(220, 53, 69, 0.8);
---pink: rgba(220, 53, 220, 0.8);
---orange-light: rgba(241, 174, 53, 0.8);
---orange: rgba(220, 110, 53, 0.8);
---orange-dark: rgba(132, 64, 32, 0.8);
---yellow: rgba(220, 220, 53, 0.8);
---green: rgba(53, 220, 69, 0.8);
---gray-light: rgba(174, 174, 174, 0.8);
---gray: rgba(128, 128, 128, 0.8);
---gray-dark: rgba(64, 64, 64, 0.7);
+--azure: #3efff5;
+--blue:  #005b94;
+--blue-ocean: #0995d4;
+--blue-sky:  #0077b4;
+--blue-deep: #004076;
+--blue-dark: #002659;
+--volet: #af49f5;
+--plum:  #594fa7;
+--purple: #5c82c4;
+--red: #f11634;
+--orange: #fe9345;
+--coral: #cd7558;
+--yellow: #ffd700;
+--green: #30b744;
+--lime: #57f39e;
+--white: #dcdcdc;
+--silver: #cdbfc1;
+--gray: #706a80;
+--dark: #111111;
+--black:#000;
 --fonbg:  rgba(13, 24, 30, 0.3);
 --fonbg2: rgba(8, 31, 44, 0.9);
 --fon: rgba(16, 16, 16, 0.3);
@@ -55,10 +60,8 @@
 --fonmenu: linear-gradient(72deg, rgba(196,195,196,0.3) 0%, rgba(56,62,62,0.3) 100%);
 --linia:#325e68;
 --linia2:#3498db;
---white: rgba(223, 223, 223, 0.9);
---black: rgba(16, 16, 16, 0.9);
---dark: rgba(0, 0, 0, 0.9);
---gray-white: rgba(239, 239, 239, 0.9);
+--font-size: 14px;
+--txt:#3a6a80;
 --txt-input:  rgba(131, 101, 181, 0.9);
 --border:  rgba(75, 54, 112, 0.9);
 }
@@ -103,6 +106,11 @@
 /* end| R O O T  -----------------------
 .div-3-kolonku{flex: 1 1 calc(33.333% - var(--gap));} 
 -------------------------------------- */
+.s1 {background: linear-gradient(135deg,#b64396,#f771d1);}
+.s2 {background: linear-gradient(135deg,#6ec6ff,#71e3c7);}
+.s3 {background: linear-gradient(135deg,#9b8cff,#c9a7ff);}
+.s4 {background: linear-gradient(135deg, #e0e0e0, #f5f5f5);}
+.s5 {background: linear-gradient(135deg, #172554, #2563eb);}
 
 /* ⏰  29.08.2025 - CSS-grid: (Flex12-3D)---------------------
 |  🐿️ R E S E T  ☘ 
