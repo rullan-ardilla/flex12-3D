@@ -44,6 +44,11 @@
 </style> 
 ```
 
+
+
+## Color scheme WEB-HUD/:
+![example of an adaptive grid](/deposit/color-palets.png)
+
 ## How to use?
 
 Just plug in the CSS (flex-12_v1.css), you are ready to create responsive grids + with 3D effects (from version 2.0).
