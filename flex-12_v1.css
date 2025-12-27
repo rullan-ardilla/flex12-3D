@@ -155,7 +155,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {color: inherit;tex
 hr {margin: var(--gap-half) 0; height:1px; background-color: var(--blue);border: 0;opacity: 0.7;}
 .a-center{text-align: center;width:100%;vertical-align: baseline;}
 .nodispl, .wievnot, .none, .hidden{display:none;}
-.rel {position:relative;}
+.rel, .relative {position:relative;}
 .clear{display:block;position:relative;padding:1px 0; width:100%;min-height:1px;font-size:2px;float:none;clear: both;}
 select, textarea, input {position:relative; font-size:14px; display: inline-block; padding: var(--gap-halff); line-height:1; background-color:var(--fonbg3); color: var(--txt-input); letter-spacing: 1px; border: 1px solid var(--linia2);}
 select option {border: none; outline: none;}
@@ -183,7 +183,7 @@ button{background-color: var(--fon); color:var(--txt);}
 input[type="number"] {-moz-appearance: textfield;}
 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {-webkit-appearance: none; margin: 0;}
 /* end| R E S E T  -----------------------
-
+/*=🐿️=end====== flex12-3D =========================================================*/
 
 
 
@@ -191,48 +191,8 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 
 /*===      A  L   L  ================= */
 
-/*==🐿️== MEDIA sitka */
-@media (max-width: 1600px) {
-    .ramka, #ramka{width:100%; max-width:100%; margin:0; padding:0 var(--gap);}
-}
 
-/* Desktop */
-@media (max-width: 1488px) {
-    :root {
-    --gap: 27px;
-	--gap-half: 13.5px;
-    }
-}
 
-/* Laptop */
-@media (max-width: 1279px) {
-    :root {
-    --gap: 22px;
-	--gap-half: 11px;
-    }
-}
-
-/* Tablet */
-@media (max-width: 767px) {
-    :root {
-    --gap: 18px;
-	--gap-half: 9px;
-    }
-h1{font-size:1.8em;}
-h2{font-size:1.4em;}
-h3{font-size:1.3em;}
-h4{font-size:1.2em;}
-h5{font-size:1.1em;}
-}
-
-/* Mobil */
-@media (max-width: 575px) {
-    :root {
-    --gap: 14px;
-	--gap-half: 7px;
-    }
-}
-/*=🐿️=end====== flex12-3D =========================================================*/
 /*Additionally - miscellaneous for starting layout*/
 @font-face {
     font-family: 'RobotoLight';
