@@ -1,1 +1,490 @@
+/* ⏰  27.12.2025 - CSS-grid: (Flex12-3D)
+|  🐿️ Ardilla-CMS ☘ 
+| -----Загальні елементи сітки----------------
+transform: perspective(180px) rotateY(-6deg) skewX(0.0deg) scale(1.0, 0.9);
+| 0. 
+| 1. Хлібні крихти
+| 2. Додаткові поля 
+| 3. ЗІРКОВИЙ РЕЙТИНГ
+| 4. MODAL Інформаційне вікно з  білкою
+| 5. СИСТЕМНІ |mesegSiteReport| ПОВІДОМЛЕННЯ
+| 6. БЛОК з кодом
+| 7. ---
+| 8. Перемикачі
+| 9. Лінії hr
+| 10. РАМКИ - FRAME
+| 12. INPUT
+| 13. PROGRES
+| 14. CIRCLE
+| 15. quadrat Квадати
+| 16. КАРТОЧКИ
+*/
+#video-fon {position: fixed;top: 0; left: 0;right: 0; bottom: 0; width: 100%; height: 100%;  object-fit: cover; z-index: -1; }
+[class*='bg-']{background : url('../img/ard-sprit.png'); display: inline-block;}
+
+/* 3-D transform */
+.scaleleft {transform: perspective(120px) rotateY(6deg) skewX(0.0deg) scale(1.0, 0.9);}
+
+/* ======SVG=========== https://hugeicons.com/icons?style=Stroke&type=Rounded ==== */
+.icon {width: 26px; height: 26px;  color: var(--blue); stroke: var(--blue);}
+
+[class*='btn']{position:relative; padding:3px 20px; font-size:14px; letter-spacing: 1px;  background:rgba(6, 27, 56, 0.615); clip-path: polygon(0 0, 97% 0, 100% 10%, 100% 100%, 3% 100%, 0 90%); border: 1px solid var(--linia2); color: var(--white);  display:inline-block; font-weight:400; white-space:nowrap;  text-decoration:none;transition: .1s; text-decoration:none; vertical-align:middle; text-align:center; box-sizing:border-box;}
+[class*='btn'] > span {float:right; margin: 5px 0 1px 2px; }
+[class*='btn'] > svg {transform: scale(0.85, 0.85); float:left; margin:0 4px 0 -4px;  color: var(--white); stroke: var(--white);}
+[class*='btn-m'] > svg {transform: scale(0.7, 0.7);margin:-2px 2px -4px -4px!important;}
+[class*='btn-b'] > svg {transform: scale(1.0, 1.0); margin:0 6px 0 -2px;}
+[class*='btn-m']{padding:4px 12px;font-size:12px;}
+[class*='btn-b']{padding:6px 24px ; font-size:16px;}
+.btn-m-red, .btn-red, .btn-b-red {background:var(--red);border:none;}
+.btn-m-green, .btn-green, .btn-b-green {background:var(--green);border:none;}
+.btn-m-yellow, .btn-yellow, .btn-b-yellow {background:var(--orange);border:none;}
+.btn-m-darck, .btn-darck, .btn-b-darck {background:var(--dark);border:none;}
+.btn-m-pink, .btn-pink, .btn-b-pink {background:var(--pink);border:none;}
+.btn-m-blue, .btn-blue, .btn-b-blue {background:var(--blue);border:none;}
+.btn-m-white, .btn-white, .btn-b-white {background:var(--white); color:var(--gray-dark); border:1px solid var(--gray);}
+.btn-m-white > svg, .btn-white > svg, .btn-b-white > svg {  color: var(--gray-dark); stroke: var(--gray-dark);}
+[class*='btn']::before {background: url(../img/ard-sprit.png) -653px -290px; width: 4px;height: 23px; display: block; content: ''; position: absolute; z-index: 26; right: 0px; top: -5px;}
+[class*='btn']::after {background: url(../img/ard-sprit.png) -768px -227px;width: 30px; height: 2px; display: block;content: '';  position: absolute; z-index: 26; left: 0; bottom: 0;}
+
+
+/* ========================================
+   📌1 (Хлібні крихти)
+   ======================================== */
+.breadcrumb{width:100%; margin:var(--gap-halff) 0;}
+.breadcrumb > .kruhtu{width:100%;display:flex; justify-content: start; align-items:center; align-content: center; gap:var(--gap-halff);}
+.breadcrumb > .kruhtu > li{padding:0;list-style: none;}
+.breadcrumb > .kruhtu > li::before{display:none; padding:3px 6px;}
+.breadcrumb > .kruhtu > li:first-child{padding-left:14px; position:relative;}
+.breadcrumb > .kruhtu > li:first-child::after{display:block; content: '🗼'; position:absolute; top:0; left:-6px;}
+
+/* ========================================
+   📌2 (Додаткові поля)
+   ======================================== */
+.ardilla-video-youtub {overflow-x:hidden; position:relative;width:auto;max-width:100%; height:600px;}
+
+/* ========================================
+   📌3 (ЗІРКОВИЙ РЕЙТИНГ)
+   ======================================== */
+.rating-container {width:238px; max-width:238px;position:relative;margin:14px 0 2px 0;}
+#ard-reyting{height:28px; background:gold; position:absolute; left:0; bottom:-33px; opacity:.2; z-index:-1; border-radius:12px;}
+#ard_rating {display: none;}
+.rating-pyramid {height:30px; display: flex;justify-content:start; align-items: flex-end; align-self: flex-end; align-content: flex-end; gap: 6px;}
+.rating-box {font-size:18px;  cursor: pointer; transition: transform 0.2s, filter 0.2s; user-select: none;}
+.rating-box:hover {transform: scale(1.2);  filter: brightness(1.2);}
+.rating-box.active {transform: scale(1.3); filter: drop-shadow(0 0 6px gold);}
+.rating-box[data-value="1"] s::before { content: "😠";font-size: 21px; }
+.rating-box[data-value="2"] s::before { content: "😕";font-size: 22px; }
+.rating-box[data-value="3"] s::before { content: "😐";font-size: 23px; }
+.rating-box[data-value="4"] s::before { content: "🙂";font-size: 24px; }
+.rating-box[data-value="5"] s::before { content: "😁";font-size: 25px; }
+.rating-box s {text-decoration: none; color:gray;}
+.rating-summary{position:relative;width:100%;}
+.rating-summary > s { color:crimson; font-size:36px; font-weight:bold; position:absolute; left:0; bottom:-4px;}
+.ard-reyt-kiluser{ position:absolute; right:5px; bottom:-4px;}
+.ard-reyt-kiluser > i {color:FireBrick; font-size:16px; font-style: normal; font-weight:700;}
+.ard-reyt-kiluser::before { content: "Проголосувало: ";font-size: 13px; }
+
+/* ======================================== 
+   📌4. MODAL Інформаційне вікно з білкою
+   ======================================== */
+#ard-modalinfo{display:block;position: fixed;height:380px; min-width:336px; left:0; bottom:0;z-index: 500;}
+#ard-modalinfo::after{display:block; content:''; width:192px; height:348px; background: url('../img/ard-sprit.png') -663px -250px;position:absolute; left:-40px; bottom:30px;z-index: 8888;}
+#ard-modalinfo::before{display:block; content:''; width:186px; height:186px; background: url('../img/ard-sprit.png') -438px -591px;position:absolute; left:60px; bottom:-150px;z-index: 8882;transform: translate(-50%, -50%) rotateX(60deg);transform-origin: center;animation: ard-modal-spin 7s linear infinite;}
+.ard-mdli-main{padding:40px 12px 30px 12px; position:absolute; left:130px; top:-20px;width:336px; min-height:200px; background: url('../img/ard-sprit.png') -861px -277px;transform: perspective(180px) rotateY(-6deg) skewX(0.0deg) scale(1.0, 0.9) translateX(-30px);}
+.ard-mdli-main:hover{transform: none; transition: all 1.2s;}
+.ard-mdli-main::before{display:block; content:''; width:336px; height:54px; background: url('../img/ard-sprit.png') -861px -819px;position:absolute; left:0px; bottom:-54px;z-index: 512;}
+.ard-mdli-main > s {color:var(--red); font-size: 2.5em; font-weight:bold; position: absolute; top: 17px; right: 32px; z-index:526; cursor:pointer;transform: rotate(45deg);}
+.ard-mdli-main > s:hover {color:var(--pink); font-size: 2.6em; transform: rotate(5deg);}
+.ard-mdli-main > h5 {display:block; text-align: center; width:100%;font-size: 2.1em; letter-spacing: 2px; color:var(--orange); margin: 0 0 17px 0; animation: ard-color-blink 5s infinite ease-in-out;}
+.ard-mdli-txt{font-size:17px; line-height:1.4; letter-spacing:1.4px;}
+@keyframes ard-modal-spin {
+   from {transform: translate(-50%, -50%) rotateX(60deg) rotate(0deg); opacity: .4;}
+   to {transform: translate(-50%, -50%) rotateX(60deg) rotate(360deg); opacity: .9;}
+}
+@keyframes ard-color-blink {
+   0% {font-size: 2.1em; letter-spacing: 2px; color:var(--orange);}
+   40% {font-size: 2.3em; letter-spacing: 4px; color:var(--red);}
+   100% {font-size: 2.1em; letter-spacing: 2px; color:var(--orange);}
+}
+
+/* ========================================
+   📌5.  СИСТЕМНІ |mesegSiteReport| ПОВІДОМЛЕННЯ
+   ======================================== */
+/*-  --*/
+#mesrep{position: fixed; width:350px; height:360px; z-index:9992; bottom:140px; right:220px;}
+#mesrep::after{content: ''; position:absolute; z-index:9997; right:-270px; bottom:-144px; width:373px; height:473px; background:url(../img/ard_report_v2.png) bottom right no-repeat; }
+.mesrptxt{position:relative; z-index:9995; opacity: .7; height:97%; background:#114c5d; padding:20px; border: 1px solid #58d7f7; border-radius:6px; transform: perspective(120px) rotateY(4deg) skewX(0.0deg) scale(1.0, 0.9)}
+.mesrptxt s {display: block; height:50px; border-radius:4px; background:#23bce3;}
+.mesrptxt s::after{content: 'Системне повідомлення:'; margin:14px 20px 0 0; font-size:20px; color:#073d46; display:inline-block; float:right;}
+#mrp_close{float:left;background:#073d46; color:#58d7f7; text-decoration:none; margin:9px 0 0 -18px; font-size:23px; padding:1px 10px;border-radius:6px;  position:relative; z-index:9999; cursor:pointer;}
+#mrp_close:hover{background:red;}
+.mesrptxt i {font-size:26px; padding: 30px 45px 0 0; color:7adff1; line-height:1.4; display:block; white-space: wrap;} 
+ /*- КОМЕНТАРІ --*/
+ #ard-mail {display:none;}
+
+/* ========================================
+   📌6. БЛОК з кодом
+   ======================================== */
+
+
+
+/* ========================================
+   📌 8. Перемикачі
+   ======================================== */
+/* 8-1. Перемикач Стандартний */
+.switch {display: flex; align-items: center; cursor: pointer;  position: relative;  width: 46px;height: 21px; border:1px solid  var(--blue);}
+.switch input, .chekik input, .chekcirkl input, .cheksquar input {display: none;}
+.switch-text::before {display:block; position: relative;content: "OFF"; color: var(--pink);  position:absolute; left: 13px; top:6px;}
+.chslider::before { content: ""; display:block; position: absolute;  width: 46px;  height: 16px;  background:none; border:none; left:1px; transform: translateY(-50%); transition: 0.7s;}
+.switch input:checked + .chslider::before {left: 26.6px; width: 16px; background: var(--blue); border:1px solid  var(--blue);}
+.switch input:checked + .chslider + .switch-text::before {color: var(--cyan); opacity:.7;  content: "ON"; position:absolute; top:6px; left:5px; }
+
+/* 8-2. Сhek - Yes-No */
+.chekentytgl{display:inline-block;width:50px;height:24px;}
+.tgl.tgl-ios, .tgl.tgl-ios:checked {display:none;}
+.tgl + .tgl-label {background:none;position: relative; top:-4px; cursor: pointer;transition: transform 0.5s ease, opacity 0.5s ease;}
+.tgl + .tgl-label:after {position: absolute; display: block; color:var(--pink); content: "⛶ no"; top:7px;  width: 70px; font-size: 1.3em; z-index:5;}
+.tgl:checked + .tgl-label:after {content: "yes ✓"; color:var(--blue); }
+
+/* 8-3. Сhek - ОКО */
+.chekentydiv{display:inline-block;width:22px;height:20px;}
+.chekenty-label .icon {transition: transform 0.5s ease, opacity 0.5s ease;color: var(--pink); stroke: var(--pink);}
+#chekenty, .chek-entypo-cancel, #chekenty:checked + .chekenty-label .chek-entypo {display: none;}
+.chekenty-label {cursor: pointer;}
+#chekenty:checked + .chekenty-label .chek-entypo-cancel {display: block;}
+#chekenty:checked + .chekenty-label .chek-entypo-cancel .icon {color: var(--blue); stroke: var(--blue);}
+
+/* 8-4. Сhek - vith icon */
+.chekik {cursor: pointer;  position: relative; display:inline-block;  width: 46px;height: 20px;}
+.chekik::before {display:block; position: relative;content: ""; width: 18px;height: 18px; border-radius:50%; border:1px solid  var(--pink);  position:absolute; left: -4px; bottom:0;}
+.chekik > svg { position:absolute; right: -4px; bottom:-6px; color: var(--pink); stroke: var(--pink); transform: translateX(-5px) scale(0.8) rotateY(180deg); transition: 0.7s;}
+.chekik:has(input:checked)::before{ border:1px solid  var(--blue);  }
+.chekik input:checked + s {display:block; position: absolute; width: 14px;height: 14px; border-radius:50%; background:  var(--blue);  position:absolute; left: -1px; bottom:3px;}
+.chekik input:checked ~ svg {transform: none;color: var(--blue); stroke: var(--blue);}
+
+/* 8-5. Сhek - Сircle Squarу */
+.chekcirkl, .cheksquar{display:inline-block; width: 20px;height: 20px; position:relative;}
+.chekcirkl > s::before, .cheksquar > s::before {display:block; width: 18px;height: 18px;content:""; color: var(--pink); border-radius:50%; border:1px solid  var(--pink);  position:absolute; left:0; top:6px;}
+.chekcirkl input:checked + s::after, .cheksquar input:checked + s::after {display:block; width: 14px;height: 14px; border-radius:50%; content:""; background: var(--blue);  position:absolute; left:3px; top:9px;}
+.chekcirkl input:checked + s::before, .cheksquar input:checked + s::before {border:1px solid  var(--blue);}
+.cheksquar > s::before {border-radius:unset;}
+.cheksquar input:checked + s::after {border-radius:unset;}
+
+/* RADIO + CHEKBOX */
+fieldset {border: 1px solid var(--blue); padding: 10px 15px;}
+fieldset legend {color: var(--blue);  font-weight: bold; letter-spacing:1.5px; padding: 2px 10px;}
+.checkbox + .checkbox, .radio + .radio {margin-block-start: 10px;}
+.checkbox, .radio {position:relative;}
+.checkbox > svg, .radio > svg {margin-bottom:-3px;}
+.checkbox-label, .radio-label {margin-inline-start: 5px;}
+.checkbox-input, .radio-input {appearance: none;position: relative; width: 20px;height: 20px;border-radius: 20px; margin:0; padding:0; border: 1px solid var(--blue);transition: 500ms;}
+.checkbox-input:not(:disabled), .checkbox-input:not(:disabled) ~ *, .radio-input:not(:disabled), .radio-input:not(:disabled) ~ * {cursor: pointer;}
+.radio-input {border-radius: 50%;}
+.checkbox-input:checked::after, .radio-input:checked::after {content: "";  position: absolute; width: 16px; height: 16px; margin:0; top:1px; left:1px;border-radius: 16px; background: var(--blue);transition: 500ms;}
+.checkbox-input:disabled,.radio-input:disabled {background: var(--border);border-color: var(--border);}
+.checkbox-input:disabled::after, .radio-input:disabled::after {filter: grayscale(60%);}
+.radio.rdmin{display:inline-block; height:22px; float:left; margin:0 5px;}
+.radio.rdmin .radio-input:checked::after {width: 14px; height: 14px; border-radius: 14px; background: var(--blue); }
+
+/* ========================================
+   📌 9. ЛІНІЇ hr
+   ======================================== */
+.bg-line-1 {width:calc(100% - 240px); margin:var(--gap-half) 0 var(--gap-half) 120px;  height: 1px; position:relative;}
+.bg-line-1::before, .bg-line-1::after {background: inherit; background-position: -213px -19px; width:120px; height: 13px; display:block; content: "";position: absolute;z-index: 12;left:-120px; top:0;}
+.bg-line-1::after {transform: scaleX(-1);left:auto; right:-120px;}
+
+.bg-line-11 {width:calc(100% - 300px); margin:var(--gap-half) 0 var(--gap-half) 150px; background-position: 0 -45px; height: 8px; position:relative;}
+.bg-line-11::before, .bg-line-11::after {background: inherit; background-position: -192px -19px; width:150px; height: 13px; display:block; content: "";position: absolute;z-index: 12;left:-150px; top:0;}
+.bg-line-11::after {transform: scaleX(-1);left:auto; right:-150px;}
+
+.bg-line-2 {width:calc(100% - 108px);margin:var(--gap-half) 0 var(--gap-half) 54px; height: 2px; position:relative;}
+.bg-line-2::before, .bg-line-2::after {background: inherit; background-position: -5px -20px; width:54px; height: 13px; display:block; content: "";position: absolute;z-index: 12;left:-54px; top:-5px;}
+.bg-line-2::after {transform: scaleX(-1);left:auto; right:-54px;}
+
+.bg-line-21 {width:calc(100% - 150px);margin:var(--gap-half) 0 var(--gap-half) 75px; height: 12px; position:relative;}
+.bg-line-21::before, .bg-line-21::after {background: inherit; background-position: -5px -20px; width:75px; height: 13px; display:block; content: "";position: absolute;z-index: 12;right:-75px; top:0px;}
+.bg-line-21::after {transform: scaleX(-1);right:auto; left:-74px;}
+
+.bg-line-3 {width:calc(100% - 304px);margin:var(--gap-half) 0 var(--gap-half) 152px;  height: 8px; position:relative;}
+.bg-line-3::before, .bg-line-3::after {background: inherit; background-position: -376px -16px; width:152px; height: 18px; display:block; content: "";position: absolute;z-index: 12;left:-152px; top:-8px;}
+.bg-line-3::after {transform: scaleX(-1);left:auto; right:-152px;}
+
+.bg-line-4 {background-position:0 -77px;width:100%; height: 5px;}
+
+/* ========================================
+   📌 10. РАМКИ - FRAME
+   ======================================== */
+.frame-1{margin:0 0 20px 30px;position:relative;display:inline-block;}
+.bg-frame-1 {position:relative;background: rgba(6, 27, 56, 0.615); clip-path: polygon(11px 0%, calc(100% - 59px) 0%, 100% 28px, 100% calc(100% - 11.2px), calc(100% - 12px) 100%, 11.6px 100%, 0% calc(100% - 84px), 0% 12px);
+  border: 1px solid var(--linia2);box-sizing: border-box;padding:var(--gap-half); z-index:20;
+}
+.frame-1::after {clip-path: polygon(0 0, 11px 0, 0 11.7px, 0 0); background : url('../img/ard-sprit.png')-10px -319px; width:12px; height:13px; display:block; content: "";position: absolute;z-index: 24;left:0; top:1px;}
+.frame-1::before{clip-path: polygon(0 0, 0px 4.1px, 58.6px 32px, 61px 0, 0 0); background : url('../img/ard-sprit.png') -75px -314px; width:61px; height:32px; display:block; content: "";position: absolute;z-index: 24;right:-2px; top:-4px;}
+.frm1-2{width:100%; height:1px;position:absolute;bottom:0;}
+.frm1-2::after {clip-path: polygon(6.4px 0, 17.8px 82px, 0 82px, 0 0); background: url('../img/ard-sprit.png')-4px -410px; width:18px; height:82px; display:block; content: "";position: absolute;z-index: 24;left:-6px; bottom:0px;}
+.frm1-2::before{clip-path: polygon(100% 0, 0% 100%, 100% 100%); background: url('../img/ard-sprit.png') -121px -480px; width:12px; height:12px; display:block; content: "";position: absolute;z-index: 24;right:0px; bottom:0px;}
+.frm1-3{width:29px; height:7px;position:absolute;bottom:-1px;left: calc(50% - 15px); right:auto; z-index: 25; background : url('../img/ard-sprit.png') -70px -487px;}
+.frame-2, .frame-3{margin:0 0 20px 20px;position:relative;display:inline-block;padding:1px 0 1px 0;}
+.bg-frame-2, .bg-frame-3 {position:relative; background: rgba(6, 27, 56, 0.615);
+  clip-path: polygon(0 0, calc(100% - 10px) 0%, 100% 10px, 100% 100%, calc(100% - 10px) 100%, 10px 100%, 0% calc(100% - 10px),  0% 10px);
+  border: 1px solid var(--linia2);box-sizing: border-box;padding:var(--gap-half); z-index:20;
+}
+.frame-2::after, .frame-2::before{ border: 1px solid #4ee1f7; box-sizing: border-box; width:12px; height:12px; display:block; content: "";position: absolute;z-index: 24;}
+.frame-2::after {clip-path: polygon(0 0, 0% 100%, 100% 0); left:-3px; top:-2.5px;}
+.frame-2::before {clip-path: polygon(100% 100%, 0% 100%, 100% 0); right:-3px; bottom:-2px;}
+.frame-2.vfr2::before, .frame-2.vfr2::after{display:none;}
+.bg-frame-2::before, .bg-frame-2::after, .bg-frame-3::before, .bg-frame-3::after{ border: 1px solid var(--linia2); width:14px; height:14px;display:block; content: ""; position: absolute;z-index: 26;}
+.bg-frame-2::before, .bg-frame-3::before {transform: rotate(45deg);  right:-8px; top:-10px;}
+.bg-frame-2::after, .bg-frame-3::after {transform: rotate(-45deg); left:-8px; bottom:-10px;}
+.bg-frame-3 {clip-path: polygon(10px 0%, calc(100% - 10px) 0%, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0% calc(100% - 10px), 0% 10px);}
+.frame-3::before, .frame-3::after{clip-path: polygon(50% 18%, 0 100%, 100% 100%); border: 1px solid var(--linia2); width:12px; height:12px;display:block; content: ""; position: absolute;z-index: 26;}
+.frame-3::before {transform: rotate(-45deg);  right:3px; bottom:4px;}
+.frame-3::after {transform: rotate(135deg); left:3px; top:4px;}
+.frame-4{position:relative; margin: var(--gap-half) 0; padding:11px 0;}
+.bg-frame-4 {padding:10px 10px 12px 10px; clip-path: polygon(110px 0%, calc(100% - 86px) 0%, 100% 4px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 54px 100%, 0% calc(100% - 15px), 0% 7px);position:relative;min-height:120px;width:100%; background: rgba(6, 27, 56, 0.615);border: 1px solid var(--linia2);}
+.frame-4::after{background: url('../img/ard-sprit.png') -315px -444px; width:109px; height:16px;display:block; content:''; position: absolute;z-index: 31; left:0; top:3px;}
+.frame-4::before{background: url('../img/ard-sprit.png') -315px -544px; width:54px; height:17px;display:block; content:''; position: absolute;z-index: 31; left:0; bottom:9px;}
+.bg-frame-4::before{background: url('../img/ard-sprit.png') -597px -544px; width:17px; height:18px;display:block; content:''; position: absolute;z-index: 32; right:0px; bottom:-4px;}
+.frm4s{width:86px; height:13px;background: url('../img/ard-sprit.png') -529px -444px; display:block; position: absolute;z-index: 33; right:-1px; top:2px;}
+
+
+
+.bg-frame-face{margin: 17px 0 30px 70px; background-position: -387px -345px; width:228px; max-height: 61px; min-height: 61px;position:relative; z-index: 20;}
+.bg-frame-face::after{background:inherit; background-position: -387px -329px; width:228px; height: 16px;display:block; content:""; position: absolute; top:-16px; z-index: 22;}
+.bg-frame-face::before{background:inherit; background-position: -387px -404px; width:228px; height: 39px;display:block; content:""; position: absolute; bottom:-39px; z-index: 22;}
+.bgface-hed{ background:inherit; background-position: -289px -312px; width:91px; height:103px;display:block; content:""; position: absolute; top:-29px; left:-70px; z-index: 28;}
+.bgface-txt{font-size:14px; padding:0 2px 0 27px; height:calc(100% + 36px); width:100%;position: absolute; top:-5px; left:0px; z-index: 26;}
+.bgface-txt h6{font-size:26px;}
+.bgface-txt sup{color: var(--blue); letter-spacing:2px; text-transform: uppercase;}
+
+
+
+/* СТЕНД з світлом - STAND*/
+.stand {width:300px;min-height:200px; padding: var(--gap-half) var(--gap-half) 70px var(--gap-half); position:relative; display: flex; justify-content: center; align-items: flex-end;}
+.stand[data-stend*="stand-1"]::after {background : url('../img/ard-sprit.png') -210px -702px;  width:150px; height:66px;display:block; content:''; position: absolute;z-index: 22; left: calc(50% - 75px); bottom:0;}
+.stand[data-stend*="stand-2"]::after {background : url('../img/ard-sprit.png') -210px -559px;  width:150px; height:57px;display:block; content:''; position: absolute;z-index: 22; left: calc(50% - 75px); bottom:0;}
+.stand[data-stend*="stand-3"]::after {background : url('../img/ard-sprit.png') -210px -628px;  width:150px; height:68px;display:block; content:''; position: absolute;z-index: 22; left: calc(50% - 75px); bottom:0;}
+
+.stand[data-stend*="stlight-1"]::before {animation: standflicker 2.5s infinite alternate; background : url('../img/ard-sprit.png') -14px -662px;  width:166px; height:105px;display:block; content:''; position: absolute;z-index: 21; left: calc(50% - 82px); bottom:37px;}
+.stand[data-stend*="stlight-2"]::before {animation: standflicker 2.5s infinite alternate; background : url('../img/ard-sprit.png') -14px -513px;  width:166px; height:105px;display:block; content:''; position: absolute;z-index: 21; left: calc(50% - 81px); bottom:40px;}
+@keyframes standflicker {
+    0% {opacity: 0;}
+    50% {opacity: 0.5; filter: brightness(300%) contrast(100%) sepia(0);}
+    100% {opacity: 0.9;}
+}
+.stand[data-stend*="stand-2"] > .stand-txt::after {animation: standflicker 2.5s infinite alternate; background : url('../img/ard-sprit.png') -206px -537px;  width:82px; height:19px;display:block; content:''; position: absolute;z-index: 24; left: calc(50% - 41px); bottom:33px;}
+.stand[data-stend*="stand-3"] > .stand-txt::after {animation: standflicker 2.5s infinite alternate; background : url('../img/ard-sprit.png') -228px -510px;  width:60px; height:24px;display:block; content:''; position: absolute;z-index: 24; left: calc(50% - 30px); bottom:38px;}
+.stand[data-stend*="stand-1"] > .stand-txt::after {animation: standflicker 2.5s infinite alternate; background : url('../img/ard-sprit.png') -187px -493px;  width:50px; height:20px;display:block; content:''; position: absolute;z-index: 24; left: calc(50% - 27px); bottom:40px;}
+
+/* ========================================
+   📌 12. INPUT
+   ======================================== */
+.inpt-1{gap:var(--gap-halfff);}
+.inpt-1 > svg, .inpt-2 > svg {color: var(--border); stroke: var(--txt-input);}
+.inpt-1::before, .inpt-2::before, .inpt-st::before {color:var(--linia2); font-size:11px; letter-spacing:1.2px; display:inline-block; content: attr(data-name); margin-right: 5px; border: 1px solid var(--border); clip-path: polygon(100% 0, 100% 50%, 91% 93%, 9% 93%, 0 50%, 0 0);  position:absolute; top:-8px; left:40px; z-index:12; background:var(--fonbg3); padding:2px 6px;}
+.inpt-1:has(input:focus)::before, .inpt-1:has(input:active)::before, .inpt-2:has(input:focus)::before, .inpt-2:has(input:active)::before {border: 1px solid var(--linia2);}
+.inpt-2 > input{padding-left:34px;}
+.inpt-2::before{left:4px; z-index:12;}
+.inpt-2 > svg{position:absolute; top:5px; left:7px; z-index:11;}
+.inpt-st > input{padding-left:26px;}
+.inpt-st::before{display:none;}
+.inpt-st > input:focus::placeholder {color: transparent;}
+.inpt-st:not(:placeholder-shown):has(input:focus)::before, .inpt-st:required:valid:has(input:focus)::before{display:block; left:20px!important; border: 1px solid var(--linia2);}
+
+.inpt-st > svg{color: var(--border); stroke: var(--txt-input); position:absolute; top:3px; left:2px; z-index:11;}
+
+/* ========================================
+   📌 13. PROGRESS
+   ======================================== */
+.ardprogress {width:100%; padding:1px;  margin:10px 0; background: var(--fonbg2); border: 1px solid var(--linia2);}
+.ardprogress > .ardprog-bar {height:14px;  text-align:center; padding-top:2px;}
+.ardprogress.prgv2 > .ardprog-bar{background: url('../img/ard-sprit.png') 0 -56px;padding-top:1.4px;}
+
+/* ========================================
+   📌 14. CIRCLE
+   ======================================== */
+.ardcircl-1{position:relative; padding:65px 0 0 10px; text-align:center; background : url('../img/ard-sprit.png') -630px -603px; width:180px; height:180px;}
+.ardcircl-1::before{display:block; content:''; position: absolute;z-index: 2; left:23px; top:23px; background: url('../img/ard-sprit.png') -451px -781px; width:136px; height:136px;animation: rotateAround 7s linear infinite;}
+.ardcircl-1 .icon {transform: scale(2.0);} 
+
+
+
+/* ========================================
+   📌 15. quadrat Квадати
+   ======================================== */
+.quadrat-1{width:100px; height:100px;position:relative;  padding:15px 0 0 15px; background: rgba(6, 27, 56, 0.615); margin:20px auto;}
+.quadrat-1::before{width:106px;height:106px; border: 1px solid var(--linia2); clip-path: polygon(0% 100%,10% 100%,52% 65%,90% 100%,100% 100%,100% 90%,62% 49%,100% 10%,100% 0%,90% 0%,50% 33%,10% 0%,0% 0%,0% 10%,40% 48%,0% 90%); display:block;  content:''; position: absolute;z-index:1; left:-4px; top:-4px;}
+.qdrat1-circl{width:70px; height:70px; border-radius:70px; background:var(--blue);}
+.qdrat1-circl > svg{color: var(--white); stroke: var(--white);transform: scale(1.6); margin: 25px 0 0 4px;}
+.qdrat1-circl::before{display:block; opacity:.5; content:''; position: absolute;z-index: 4; left:-18px; top:-18px; background: url('../img/ard-sprit.png') -451px -781px; width:136px; height:136px;animation: rotateqdrat1circl 22s linear infinite; }
+@keyframes rotateqdrat1circl {0% {transform: rotate(0deg) scale(0.65);} 100% {transform: rotate(360deg) scale(0.65);}}
+
+.rectang-v1{position:relative; border-top: 1px solid var(--linia2); font-size:20px; height:36px; padding-top:6px; width:200px;}
+.rectang-v1 span:first-child{float:left;font-size:16px;padding:0 20px 0 7px; color: var(--linia2);}
+.rectang-v1 span{float:right; color: var(--linia2); color: var(--white);}
+.rectang-v1::before, .rectang-v1::after{display:block; opacity:.7; content:''; position: absolute;z-index: 4; left:0; bottom:-4px;background : url('../img/ard-sprit.png') 0 -56px; width:35px; height: 9px;}
+.rectang-v1::after{filter: grayscale(100%); left:auto; right:0; bottom:1px; height:4px; width:135px;}
+.rectang-v1::before{filter: grayscale(1) brightness(3); clip-path: polygon(20% 0%,100% 0%,80% 100%,0% 100%);}
+
+
+
+/* ========================================
+   📌 16. КАРТОЧКИ 
+   ======================================== */
+.ardgolova{width:160px; height:172px; background : url('../img/ard-sprit.png') -1px -769px; position:relative;}  
+.ardgolova::after, .ardgolova::before {display:block; opacity:.6; content:''; position: absolute;z-index: 4; left:-10px; top:-6px;  width: 180px;  height: 180px; background-color: transparent;  border: 3px solid #00B7EB;  border-radius: 50%;box-shadow: 0 0 1px #00B7EB,  0 0 4px #00B7EB,  0 0 6px rgba(0, 183, 235, 0.5), transform-origin: center bottom;  animation: rotateVertical 12s linear infinite;}
+.ardgolova::before{ animation: rotateGorizont 12s linear infinite;}
+
+/*Коментар*/
+.ard_ca_user {width:120px;padding-top:20px;}
+.ard_ca_user > img{clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);}
+.ard_ca_text{flex:1;}
+.ard_ca_comtext{position:relative; font-size:16px; letter-spacing:2px; padding: var(--gap) 50px var(--gap) 0; border-top: 1px solid var(--linia);  border-bottom: 1px solid var(--linia);}
+.ard_ca_comtext::after{display:block; opacity:.9; content:'';  width:50px;  height: 50px;background : url('../img/ard-sprit.png') -886px -934px; position: absolute;z-index: 1; right:0; top:16px;  }
+.ard_cm_data > .bg-line-4{flex:1;margin:19px 0 0 19px;opacity:.5;}
+.ard_cm_data > div:first-child{width:160px; margin-top:12px;color:var(--linia);}
+.ard_ca_li h5{font-size:18px;color: var(--blue);font-weight:800;letter-spacing:1px;}
+.ard_ca_reiting {margin:0; padding:0; gap: var(--gap-halfff);}
+.ard_ca_reiting li{margin:1px; padding:1px;}
+.ard_ca_reiting li::after{display:none;}
+.achndp > svg {transform: scaleX(-1);}
+.ard_reit_plus > span{margin:7px 0 0 3px;float:right;display:inline-block;}
+.ard_reit_user > span{margin:5px 0 0 3px;float:right;display:inline-block;}
+.achndm > svg {transform: scaleY(-1); margin-bottom: -11px;}
+   
+     
+   
+   
+/* РАКЕТИ - ROCKET*/
+.bg-rocet{ width:31px; height:31px;display:block; position: absolute; bottom:-15px; right:8px; z-index:28;}
+.bg-rocet[data-roket="v1"]{background-position: -368px -586px;}
+.bg-rocet[data-roket="v2"]{background-position: -368px -622px;}
+.bg-rocet[data-roket="v3"]{background-position: -368px -658px;}
+.bg-rocet[data-roket="v4"]{background-position: -368px -686px;}
+.bg-rocet[data-roket="v5"]{background-position: -368px -729px;}
+
+
+/* ВИНОСКИ */
+.vnss{position:relative; padding:0 22px 21px 0; min-height:20px; width:204px; font-size:22px;}
+.vnss[data-linia="v1"]::before{background : url('../img/ard-sprit.png') -14px -180px; min-width:182px; height: 21px; content:''; position: absolute;z-index: 23; left:0;bottom:-5px;}
+.vnss[data-linia="v11"]::before{background : url('../img/ard-sprit.png') -14px -210px; min-width:182px; height: 21px; content:''; position: absolute;z-index: 23; left:0;bottom:-5px;}
+.vnss[data-linia="v2"]::before{background : url('../img/ard-sprit.png') -14px -291px; min-width:182px; height: 21px; content:''; position: absolute;z-index: 23; left:0;bottom:-5px;}
+.vnss[data-linia="v3"]::before{background : url('../img/ard-sprit.png') -14px -243px; min-width:184px; height: 21px; content:''; position: absolute;z-index: 23; left:0;bottom:-5px;}
+.vnss[data-linia="v4"]::before{background : url('../img/ard-sprit.png') -14px -266px; min-width:182px; height: 21px; content:''; position: absolute;z-index: 23; left:0;bottom:-5px;}
+.circl-v1, .circl-v1-2{background : url('../img/ard-sprit.png') -562px -26px; width:10px; height:10px;display:block;position: absolute;z-index: 24; right:16px;bottom:-8px;}
+.circl-v2, .circl-v2-2{background : url('../img/ard-sprit.png') -582px -23px; width:14px; height:14px;display:block;position: absolute;z-index: 24; right:14px;bottom:-8px;}
+.circl-v2-2::after{background : url('../img/ard-sprit.png') -612px -19px; width:22px; height:22px;display:block; content:''; position: absolute;z-index: 25; right:-5px;bottom:-4px; animation: rotateAround 5s linear infinite;}
+.circl-v3, .circl-v3-2{background : url('../img/ard-sprit.png') -652px -24px; width:12px; height:12px;display:block;position: absolute;z-index: 24; right:14px;bottom:-8px;}
+.circl-v3-2::after, .circl-v1-2::after{background : url('../img/ard-sprit.png') -675px -19px; width:20px; height:20px;display:block; content:''; position: absolute;z-index: 25; right:-5px;bottom:-4px; animation: rotateAround 5s linear infinite;}
+.vnsright{transform:scaleX(-1);padding:0 0 21px 0;}
+.vnsright > sub{display:inline-block; transform: scaleX(-1);}
+
+
+/* КНОПКИ */
+[class*='knop-'] > span {white-space: nowrap; display:inline-flex; flex-flow: row nowrap; justify-content: space-between;  align-items:center; align-content: center;}
+[class*='knop-'] > span svg{transform: scale(0.85, 0.85); margin:0 8px 0 -4px;}
+[class*='knop-'] > span u{text-decoration:none;}
+.knop-1 {color:var(--linia2); position:relative; display:inline-block;padding:7px 0 0 0;}
+.knop-1::after{background: url('../img/ard-sprit.png') -518px -282px; width:91px; height:12px;display:block; content:''; position: absolute;z-index: 27; left:-1px; top:0;}
+.knop-1 > span{font-size: 14px; line-height:1.4; letter-spacing:1px;margin:0; padding:4px 14px; clip-path: polygon(95px 0%, calc(100% - 5px) 0%, 100% 5px, 100% calc(100% - 5px), 100% 100%, 5px 100%, 0% calc(100% - 5px), 0% 3px);position:relative;min-height:30px;min-width:140px; background: rgba(6, 27, 56, 0.615);border: 1px solid var(--linia2);}
+.knop-1 > span::before{background: url('../img/ard-sprit.png') -653px -290px; width:4px; height:23px;display:block; content:''; position: absolute;z-index: 26; right:0px; top:0;}
+.knop-1 > span::after{background: url('../img/ard-sprit.png') -519px -312px; width:5px; height:4px;display:block; content:''; position: absolute;z-index: 26; left:-1px; bottom:0;}
+
+.knop-2 {color:var(--linia2); position:relative; display:inline-block;padding:0;}
+.knop-2::after{background: url('../img/ard-sprit.png') -631px -267px; width:23px; height:5px;display:block; content:''; position: absolute;z-index: 27; right:-1px; bottom:1px;}
+.knop-2::before{background: url('../img/ard-sprit.png') -520px -266px; width:33px; height:7px;display:block; content:''; position: absolute;z-index: 27; left:0px; bottom:0px;}
+
+.knop-2 > span{font-size: 14px; line-height:1.4; letter-spacing:1px;margin:0; padding:4px 16px 6px 14px; 
+clip-path: polygon(41px 0%, calc(100% - 52px) 0%, 100% 3px, 100% calc(100% - 6px), calc(100% - 23px) 100%, 33px 100%, 0% calc(100% - 6px), 0% 3px);
+position:relative; min-height:30px;min-width:140px; background: rgba(6, 27, 56, 0.615);border: 1px solid var(--linia2);}
+.knp2f::before{background: url('../img/ard-sprit.png') -603px -246px; width:52px; height:4px;display:block; content:''; position: absolute;z-index: 26; right:-1px; top:-1px;}
+.knp2f::after{background: url('../img/ard-sprit.png') -518px -246px; width:41px; height:5px;display:block; content:''; position: absolute;z-index: 26; left:-2px; top:-1px;}
+
+.big-knop1{color:var(--linia2); position:relative; padding:7px 0 0 20px; background: url('../img/ard-sprit.png') -520px -198px;min-width:110px; max-width:330px; height:34px;display:inline-block; text-align:center; line-height:1.4; font-size: 14px;}
+.big-knop1::after{background: url('../img/ard-sprit.png') -754px -198px; width:100px; height:34px;display:block; content:''; position: absolute;z-index: 24; right:-100px; top:0px;}
+.big-knop1 > span {width: calc(100% + 100px); position:relative; right:-38px; text-align:center;}
+
+/*-- MENU --*/
+    
+.ard-menu {position:relative;}
+.ard-menu:hover{transform: none;}
+.ard-menu h3 {font-size:26px; font-weight:800; letter-spacing:1.5px;}
+.ard-menu h3 span {color:var(--blue);}
+.ard-menu sub {font-size:12px;  display:block; margin-bottom: var(--gap); border-bottom:1px solid var(--gray-dark);}
+.ard-menu-rozd {padding:10px 20px; }
+.ard-menu-rozd h4 {font-size:20px; margin:0; font-weight: 800; cursor: pointer; position:relative;}
+.ard-menu-rozd h4::after{content: "⭭"; display: block;position:absolute; left:-10px; top:3px; font-weight: 100; font-size: 0.8em;}
+.ard-menu-rozd h4 svg {margin:0 0 -5px 0;}
+.ard-menu-pid {margin:0; padding:0;display:none; transition: all 2s; }
+.ard-menu-pid li::after{display:none;}
+.ard-menu-pid li {margin:0; padding:4px 0; position:relative;list-style:none;list-style-type: none; font-size: 1.2em;}
+.ard-menu-pid li s {margin: 0 6px 0 0;}
+.linav.actli{color: var(--jovt); text-decoration:underline; padding-left:10px; font-weight:800;}
+.ard-menu-rozd.active .ard-menu-pid{display: block;}
+.ard-menu-rozd.active h4::after{content: "⭫";}
+
+
+/* ЦИТАТИ */
+.ardquotes {margin: var(--gap) auto; position:relative; padding: 0 20px 0 30px; text-transform: uppercase;   font-size: 1.3em; font-family: "Handjet", serif;font-weight: 400; border-left: 2px solid var(--blue); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); font-style: italic; letter-spacing:2px; line-height: 1.2; position: relative; quotes: "\201C" "\201D" "‹" "›";}
+.ardquotes::before {content: open-quote; line-height: 0; font-size: 3.6rem; font-style: normal; color: var(--blue); position: absolute; left: 5px; top: 14px;}
+.ardquotes::after {content: close-quote;  line-height: 0; font-size: 3.6rem; font-style: normal; color: var(--blue); position: absolute; right: 0; bottom:-10px;}
+
+/* ВИДИ АНІМАЦІЇ */
+/* a1 - рух вліво-вправо */
+[data-animat="a1"]{animation: marguee 4s ease-in-out alternate infinite;}
+@keyframes marguee {
+  0%   {transform: perspective(120px) rotateY(6deg) skewX(0.0deg) scale(1.0, 0.9);} 
+  100%   {transform: perspective(420px) rotateY(-6deg) skewX(0deg) scale(1.0, 0.9);}
+
+}
+@keyframes rotateAround {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+/*Вертикальне і горизонтальне прокручування навколо осі*/
+@keyframes rotateVertical {0% {transform: perspective(500px) rotateY(0deg);} 100% { transform: perspective(500px) rotateY(360deg);}}
+@keyframes rotateGorizont {0% {transform: perspective(500px) rotateX(0deg);} 100% { transform: perspective(500px) rotateX(360deg);}}  
+
+
+/*==🐿️== MEDIA sitka */
+@media (max-width: 1600px) {
+    #ramka, .ramka{width:100%; max-width:100%!important; padding:0 var(--gap); margin:0; }
+}
+
+/* Desktop */
+@media (max-width: 1488px) {
+    :root {
+    --gap: 27px;
+	--gap-half: 13.5px;
+    }
+}
+
+/* Laptop */
+@media (max-width: 1279px) {
+    :root {
+    --gap: 22px;
+	--gap-half: 11px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 767px) {
+    :root {
+    --gap: 18px;
+	--gap-half: 9px;
+    }
+h1{font-size:1.8em;}
+h2{font-size:1.4em;}
+h3{font-size:1.3em;}
+h4{font-size:1.2em;}
+h5{font-size:1.1em;}
+}
+
+/* Mobil */
+@media (max-width: 575px) {
+    :root {
+    --gap: 14px;
+	--gap-half: 7px;
+    }
+}
 
