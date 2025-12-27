@@ -80,6 +80,9 @@
 .col-4-8 > .c-8{width: calc(var(--col-8) - var(--gap-1));}
 .col-5-7 > .c-5{width: calc(var(--col-5) - var(--gap-1));}
 .col-5-7 > .c-7{width: calc(var(--col-7) - var(--gap-1));}
+.col-5-4-3 > .c-5{width: calc(var(--col-5) - var(--gap-2));}
+.col-5-4-3 > .c-4{width: calc(var(--col-4) - var(--gap-2));}
+.col-5-4-3 > .c-3{width: calc(var(--col-2) - var(--gap-2));}
 .col-6-6 > .c-6{width: calc(var(--col-6) - var(--gap-1));}
 .col-6-3-3 > .c-6{width: calc(var(--col-6) - var(--gap-2));}
 .col-6-3-3 > .c-3{width: calc(var(--col-3) - var(--gap-2));}
