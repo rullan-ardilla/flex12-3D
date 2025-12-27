@@ -60,7 +60,25 @@ transform: perspective(180px) rotateY(-6deg) skewX(0.0deg) scale(1.0, 0.9);
 /* ========================================
    📌2 (Додаткові поля)
    ======================================== */
-.ardilla-video-youtub {overflow-x:hidden; position:relative;width:auto;max-width:100%; height:600px;}
+.ardilla-video-youtub {position: relative; cursor: pointer; background-color: #000; aspect-ratio: 16 / 9; overflow: hidden;}
+.ardilla-video-youtub img {width: 100%; height: 100%; object-fit: cover;}
+.play-button {position: absolute;  top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px;  background-color: rgba(33, 33, 33, 0.8); border-radius: 12%; z-index: 1;}
+.play-button:after {content: ""; display: block; border-style: solid; border-width: 10px 0 10px 20px; border-color: transparent transparent transparent #fff; margin: 14px 26px;}
+
+/* ========================================
+   📌 МОДАЛЬНЕ ВІКНО РЕЗУЛЬТАТІВ ПОШУКУ
+   ======================================== */
+#ardmodalsearch-overlay {position: fixed;  top: 0; left: 0; padding:var(--gap-half) var(--gap-half) var(--gap-half)  120px; width: 100%; height: 100%; max-height: 100vh; background-color: rgba(0, 0, 0, 0.8);  display: flex; justify-content: center; align-items: top; z-index: 3000;}
+#ardmodalsearch-content {background-color: #fff; overflow-y: auto; padding:var(--gap-half); border: 4px solid var(--pink); border-radius: 12px; max-height: 100vh; width: 94%; max-width: 1400px; min-height:250px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); position: relative;}
+#ardmodsearch-closebtn {font-weight: bold; cursor: pointer; position: absolute; top: 6px; right: -6px; border-radius:50%; font-size: 40px; padding:6px 18px;  background: var(--pink); color:white;}
+.ard_rezsearch-zag {width:100%; background: var(--pink); font-size:18px; padding:var(--gap-half); text-align:center; color:white; border-radius:12px;}
+#ardmodalsearch-overlay::after { display: block; content: ""; width: 180px; height: 220px; position: absolute; left: 6px; top: 20px; z-index: 3022; background: url(/0-templates/acess/img/css_sprites2.png) -372px -617px;}
+#ardmodalsearch-overlay::before { display: block; content: ""; width: 186px; height: 186px; position: absolute; left: 100px; top: 245px; z-index: 3021; transform: translate(-50%, -50%) rotateX(60deg); transform-origin: center center; background: url(/0-templates/acess/img/css_sprites2.png) -352px -432px; animation: 7s linear 0s infinite normal none running ard-modal-spin;}
+/*Карточка результатів пошуку*/
+.ardkart_rezsear{margin: var(--gap-half); padding:var(--gap-half); border-radius: 12px; border: 1px solid gray; }
+.ardkart_rezsear a h3{font-size:17px; margin-bottom: var(--gap-halff);}
+.ardkart_rezsear sub{border-radius: 6px; font-size:13px; padding:var(--gap-halfff) var(--gap-halff);  background: var(--fongrad_gray);}
+.ardkart_rezsear sup{font-size:13px;}
 
 /* ========================================
    📌3 (ЗІРКОВИЙ РЕЙТИНГ)
