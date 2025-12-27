@@ -110,6 +110,7 @@
 /* end| R O O T  -----------------------
 .div-3-kolonku{flex: 1 1 calc(33.333% - var(--gap));} 
 -------------------------------------- */
+.s0 {background: radial-gradient(circle at top, #0b1c2d, #02060c);}
 .s1 {background: linear-gradient(135deg,#b64396,#f771d1);}
 .s2 {background: linear-gradient(135deg,#6ec6ff,#71e3c7);}
 .s3 {background: linear-gradient(135deg,#9b8cff,#c9a7ff);}
