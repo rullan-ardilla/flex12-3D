@@ -506,3 +506,10 @@ h5{font-size:1.1em;}
     }
 }
 
+@media (max-width: 520px) {
+    :root {
+    --gap: 9px;
+	--gap-half: 4px;
+	}
+
+}
